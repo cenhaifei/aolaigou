@@ -1,16 +1,17 @@
 $(function(){
 	//加载头部公共样式
-	$( '#header' ).load( '../html/common.html?_=' + Math.random() );
+	$( '#header' ).load( 'heard.html?_=' + Math.random() );
+    $( '#footer' ).load( 'footer.html?_=' + Math.random() );
 	//查看当前是否处于登录状态，如果是改变header登录信息
-	// if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
-	// 	layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 利群商城！');
-	// }
+	if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
+		layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
+	}
 
 
 //轮播图
 	$('.carousel').carousel()
 
-// 倒计时
+// 倒计时1
     $.extend($.fn,{
 
         fnTimeCountDown:function(d){
@@ -106,8 +107,6 @@ $(function(){
         }
     });	
 	$("#fnTimeCountDown").fnTimeCountDown("2018/07/08 18:45:13");
-
-
 //	加载页面的时候给最中间的图片设置成放大效果
 	$('.indbox2').css({width: "398px",height: "520px"}).find('.boximg').css({width: "398px",height:"880px",overflow: "hidden"});
 
@@ -193,7 +192,33 @@ $("#banner li").eq(n).trigger('click');
 
 
 
+var intDiff = parseInt(600000);//倒计时总秒数量
 
+function timer(intDiff){
+    window.setInterval(function(){
+    var day=0,
+        hour=0,
+        minute=0,
+        second=0;//时间默认值        
+    if(intDiff > 0){
+        day = Math.floor(intDiff / (60 * 60 * 24));
+        hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+        minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+        second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+    }
+    if (minute <= 9) minute = '0' + minute;
+    if (second <= 9) second = '0' + second;
+    $('#day_show').html(day+"天");
+    $('#hour_show').html('<s id="h"></s>'+hour+'时');
+    $('#minute_show').html('<s></s>'+minute+'分');
+    $('#second_show').html('<s></s>'+second+'秒');
+    intDiff--;
+    }, 1000);
+} 
+
+$(function(){
+    timer(intDiff);
+}); 
 
 
 

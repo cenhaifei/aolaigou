@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="plug/font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="plug/bootstrap-3.3.0-dist/dist/css/bootstrap.css">
@@ -11,12 +11,13 @@
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="plug/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="plug/jquery-cookie-v1.4.1/jquery.cookie.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 	<!--头部-公共 js加载-->
 	<div id="header"></div>
-	<div id="sou">
+<!-- 	<div id="sou">
 		<div class="logo"><a href="javascript:(0)"><img src="images/index/logo.jpg"></a></div>
 		<div class="giff"><a href="#"><img src="images/index/gif.gif"></a></div>
 		<div class="hf_Input">
@@ -39,87 +40,321 @@
 				<li>天猫直营</li>
 			</ul>
 		</div>
-	</div>
-	<div id="main">
+	</div> -->
+	<!-- <div id="main">
 		<div class="nav">
 			<div class="nav_hf">
 				<div class="sidebar1">全部商品分类</div>
 				<div class="sidebar">
 					<ul>
 				        <li class="ul_li">
-							<i class="fa fa-diamond" style="color: #F57173;"></i>
-				            <ul class="sub-menu">
-				                <li><a href="#">11111</a></li>
-				                <li><a href="#">22222</a></li>
-				                <li><a href="#">33333</li>
-				                <li><a href="#">44444</a></li>
-				                <li><a href="#">55555</a></li>
-				                <li><a href="#">66666</a></li>
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub1">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>
+				            </ul>
+				        </li>
+						<li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub2">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a><a href="html/list.html">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="html/list.html">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
 				            </ul>
 				        </li>
 				        <li class="ul_li">
-				            <a href="#">特价</a>
-				            <ul class="sub-menu">
-				                <li><a href="#">11111</a></li>
-				                <li><a href="#">22222</a></li>
-				                <li><a href="#">33333</li>
-				                <li><a href="#">44444</a></li>
-				                <li><a href="#">55555</a></li>
-				                <li><a href="#">66666</a></li>
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub3">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
 				            </ul>
 				        </li>
 				        <li class="ul_li">
-				            <a href="#">1111</a>
-				            <ul class="sub-menu">
-				                <li><a href="#">77777</li>
-				                <li><a href="#">44444</a></li>
-				                <li><a href="#">55555</a></li>
-				                <li><a href="#">66666</a></li>
-				                <li><a href="#">77777</li>
-				                <li><a href="#">88888</a></li>
-				                <li><a href="#">55555</a></li>
-				                <li><a href="#">66666</a></li>
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub4">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
+				            </ul>
+				        </li>	
+				        <li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub5">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
+				            </ul>
+				        </li>				        
+				        <li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub6">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
 				            </ul>
 				        </li>
 				        <li class="ul_li">
-				            <a href="#">22222</a>
-				            <ul class="sub-menu">
-				                <li><a href="#">999999</a></li>
-				                <li><a href="#">999988</a></li>
-				                <li><a href="#">999999</a></li>
-				                <li><a href="#">999988</a></li>
-				                <li><a href="#">999999</a></li>
-				                <li><a href="#">999988</a></li>
-				                <li><a href="#">999999</a></li>
-				                <li><a href="#">999988</a></li>
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub7">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
 				            </ul>
 				        </li>
 				        <li class="ul_li">
-				            <a href="#">33333</a>
-				            <ul class="sub-menu">
-				                <li><a href="#">33343</a></li>
-				                <li><a href="#">65556</a></li>
-				                <li><a href="#">3333</a></li>
-				                <li><a href="#">65556</a></li>
-				                <li><a href="#">3343</a></li>
-				                <li><a href="#">55556</a></li>
-				                <li><a href="#">34343</a></li>
-				                <li><a href="#">65556</a></li>
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub8">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
 				            </ul>
 				        </li>
-				        <li>
-				            <a href="#">4444</a>
-				            <ul class="sub-menu">
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				                <li><a href="#">444</a></li>
-				            </ul>       
+				        <li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub9">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
+				            </ul>
 				        </li>
+				        <li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub10">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
+				            </ul>
+				        </li>
+				        <li class="ul_li">
+							<dl>
+								<dt><a href="#">奢侈品</a></dt>
+								<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+							</dl>				          
+				            <ul class="sub-menu sub11">
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>		<br>	
+								<dl>
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>	
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>						
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>			
+								<dl><br>	
+									<dt><a href="#">奢侈品</a></dt>
+									<dd><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a><a href="#">包袋</a></dd>
+								</dl>
+				            </ul>
+				        </li>				        			        
 				    </ul>
 				</div>
 			</div>
@@ -139,7 +374,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div id="lunbo">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
@@ -473,23 +708,195 @@
 		
 		<div class="nai">
 			<div class="naike">
-			<ul>
-				<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
-				<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
-			</ul>
+				<ul>
+					<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (2).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
+					<li><a href="#"><img src="images/index/nai (1).jpg"></a></li>
+					<li style="border-right: 0;"><a href="#"><img src="images/index/nai (1).jpg"></a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="yaya">
 			<div class="ya">
 				<a href="#"><img src="images/index/ya.jpg"></a>
 			</div>
 		</div>
+		<div class="hf_hs">
+			<div class="hs">
+				<div>
+					<a href="#"><img src="images/index/kua.jpg"></a>
+				</div>
+				<div class="iwarp-form">正品保证全球同价</div>
+			</div>
+		</div>
+		<div class="kua">
+			<div class="kuajing">
+				<div class="kua_zuo">
+					<div class="kua_s">
+						<div class="s_zuo">
+							<a href="#"><img src="images/index/kua1.jpg"></a>
+						</div>
+						<div class="s-you">
+							<a href="#"><img src="images/index/kua2.jpg"></a>
+						</div>
+					</div>
+					<div class="kua_xia">
+						<ul>
+							<li>
+								<div class="ir1-twocon">
+							 		<div class="ir1-twoimg"><a href="#"><img src="images/index/kua3.jpg"></a></div> 
+							 		<div class="irtwoval">
+							 			<div class="irtwoval1"><del>¥978.00</del></div>
+							 			<div class="irtwoval2"><span><a href="#">滋盈肌本润颜水乳套盒</a></span><em>¥724.00</em></div>
+							 		</div>
+							 	</div>
+							</li>
+							<li>
+								<div class="ir1-twocon">
+							 		<div class="ir1-twoimg"><a href="#"><img src="images/index/kua3.jpg"></a></div> 
+							 		<div class="irtwoval">
+							 			<div class="irtwoval1"><del>¥978.00</del></div>
+							 			<div class="irtwoval2"><span><a href="#">滋盈肌本润颜水乳套盒</a></span><em>¥724.00</em></div>
+							 		</div>
+							 	</div>
+							</li>
+							<li>
+								<div class="ir1-twocon">
+							 		<div class="ir1-twoimg"><a href="#"><img src="images/index/kua3.jpg"></a></div> 
+							 		<div class="irtwoval">
+							 			<div class="irtwoval1"><del>¥978.00</del></div>
+							 			<div class="irtwoval2"><span><a href="#">滋盈肌本润颜水乳套盒</a></span><em>¥724.00</em></div>
+							 		</div>
+							 	</div>								
+							</li>
+							<li>
+								<div class="ir1-twocon">
+							 		<div class="ir1-twoimg"><a href="#"><img src="images/index/kua3.jpg"></a></div> 
+							 		<div class="irtwoval">
+							 			<div class="irtwoval1"><del>¥978.00</del></div>
+							 			<div class="irtwoval2"><span><a href="#">滋盈肌本润颜水乳套盒</a></span><em>¥724.00</em></div>
+							 		</div>
+							 	</div>								
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="kua_you">
+					<div class="rost">
+						<ul>
+							<li><a href="#"><img src="images/index/shi.jpg"></a></li>
+							<li><a href="#"><img src="images/index/shi.jpg"></a></li>
+							<li><a href="#"><img src="images/index/shi.jpg"></a></li>
+							<li><a href="#"><img src="images/index/shi.jpg"></a></li>
+							<li><a href="#"><img src="images/index/shi.jpg"></a></li>
+							<li style="border:0;"><a href="#"><img src="images/index/shi.jpg"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hf_hs">
+			<div class="hs">
+				<div>
+					<a href="#"><img src="images/index/te.jpg"></a>
+				</div>
+				<div class="iwarp-form">专门做特卖的频道</div>
+			</div>
+		</div>
+		<div class="temai">
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+					<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+						<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+						<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+						<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+						<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+			<div class="brand">
+				<a href="#"><img src="images/index/temai1.jpg"></a>
+				<div class="ibrandcon-time">
+						<div class="tiitem">
+						<i class="fa fa-clock-o fa-lg" style="color:#000;"></i>
+						<span>仅剩：</span>
+						<span id="day_show">0天</span>
+						<strong id="hour_show">0时</strong>
+						<strong id="minute_show">0分</strong>
+						<strong id="second_show">0秒</strong>
+					</div>
+				</div>
+				<div class="ibrandcon-btn"><a href="#">马上抢购</a></div>	
+			</div>
+		</div>
 	</div>
-
+	<div class="clear"></div>
+	<div id="footer">
+		
+	</div>
 </body>
 </html>

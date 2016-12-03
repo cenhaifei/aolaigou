@@ -1,215 +1,14 @@
 body{
 	font-size: 12px;
 }
-#sou{
-	width: 1200px;
-	height: 80px;
-	margin: auto;
-	min-width: 1200px;
-	margin-top: 30px;
-	position: relative;
-}
-.logo{
-	float: left;
-}
-.giff{
-	float: left;
-}
-.hf_Input{
-	float: left;
-	width: 430px;
-	height: 80px;
-	position: absolute;
-	top: 6px;
-	left: 460px;
-	padding-left: 20px;
-}
-.former input{
-	width: 340px;
-	height: 30px;
-	border: 0;
-}
-.for1{
-	border: 1px solid #777;
-	border-radius: 5px;
-}
-.for1 button{
-	height: 36px;
-	width: 55px;
-	padding-left: 20px;
-	margin-left: 10px;
-	border-left: 1px solid #dedede;
-	border-right: 0;
-	border-top: 0;
-	border-bottom: 0;
-	background-color: #fff;
-	font-size: 14px;
-}
-.former p{
-	margin-top: 10px;
-	color: #666;
-}
-.former p a{
-	color: #999;
-	margin:0 5px;
-	text-decoration: none;
-}
-.former p a:hover{
-	color: red;
-}
-
-.lis{
-	width: 230px;
-	height: 66px;
-	float: right;
-}
-.lis ul{
-	float: left;
-	margin-left: 20px;
-	vertical-align: middle;
-	width: 48px;
-    font-size: 12px;
-}
-.lis ul li{
-	color: #666;
-}
-.lis_1{
-	width: 38px;
-	height: 38px;
-	margin-bottom: 10px;
-	background-image: url(../images/index/core.png);
-	background-position:-355px -78px;
-}
-.lis_2{
-	width: 38px;
-	height: 38px;
-	margin-bottom: 10px;
-	background-image: url(../images/index/core.png);
-	background-position:-429px -78px;
-}
-.lis_3{
-	width: 38px;
-	height: 38px;
-	margin-bottom: 10px;
-	background-image: url(../images/index/core.png);
-	background-position:-503px -78px;
-}
-
-#main{
-	width: 100%;
-	height: 45px;
-	background-color: #C81417;
-}
-.nav{
-	width: 1200px;
-	height: 45px;
-	line-height: 45px;
-	margin: auto;
-	margin-top: 30px;
-}
-
-
-.sidebar1{
-	width: 218px;
-	line-height: 45px;
-	text-align: center;
-	background-color: #890D0F;
-	color: #fff;
-	font-family: "Microsoft Yahei";
-	font-size: 16px;
-}
-.sidebar {
-  width: 216px;
-  height: 539px;
-  border:1px solid #dedede;
-  border-top: 0;
-  z-index: 1;
-  background-color: #fff;
-  display: none;
-}
-
-.sidebar li {
-  list-style: none;
-  padding: 10px;
-  position: relative;
-}
-.ul_li:hover{
-    background-color: #000;
-}
-.ul_hf{padding: 0;}
-.sidebar a {
-  text-decoration: none;
-  display: block;
-  color: #555;
-  font: 14px Open Sans;
-  position: relative;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  color: red;
-}
-
-.sidebar .sub-menu {
-  position: fixed;
-  left: 250px;
-  top: 200px;
-  padding: 0px;
-  width: 280px;
-  height: 539px;
-  display: none;
-  border: 1px solid red;
-  background-color: #fff;
-}
-.sub-menu li{float: left;}
-.sidebar ul li:hover ul {
-  display: block;
-
-}
-.nav_hf{
-	width: 218px;
-	float: left;
-}
-.nav_hf2{
-	width: 530px;
-	height: 44px;
-	float: left;
-}
-.nav_hf2 ul li{
-	float: left;
-	margin-left: 45px;
-}
-.nav_hf2 ul li a{
-	color: #fff;
-	font-size: 16px;
-	text-decoration: none;
-	font-family: "Microsoft Yahei";
-}
-.gi img{
-	position: relative;
-	top: -12px;
-}
-.car{
-	width: 37%;
-	float: left;
-}
-.carval{
-	float: right;
-}
-/*购物车图标颜色*/
-.fa{
-	color: #fff;
-}
-.carval a{
-	font-size: 16px;
-	color: #fff;
-	text-decoration: none;
-}
 
 #lunbo{
 	width: 100%;
 	height: 415px;
 		overflow: hidden;
+}
+.glyphicon-chevron-left{
+    margin-left: 200px !important;
 }
 .carousel{
 	width: 1263px;
@@ -228,6 +27,9 @@ body{
 	width: 100%;
 	height: 165px;
 	margin-top: 10px;
+}
+.clear{
+    clear: both;
 }
 .hf_warp ul{
 	width: 1200px;
@@ -584,7 +386,7 @@ body{
 /**/
 .word{
 	width: 1200px;
-	height: 607px;
+	height: 597px;
 	margin-top: 5px;
 	margin:auto;
 }
@@ -812,7 +614,7 @@ body{
 }
 .nai ul li{
 	float: left;
-	width: 145px;
+	width: 149px;
     height: 50px;
     border-right: 1px solid #eaeaea;
     overflow: hidden;
@@ -830,6 +632,177 @@ body{
 	margin: auto;
 	margin-top: 30px;
 }
+
+
+.kua{
+    width: 100%;
+    height: 694px;
+}
+.kuajing{
+    width: 1200px;
+    height: 694px;
+    margin: auto;
+}
+.kua_zuo{
+    width: 1005px;
+    height: 694px;
+    float: left;
+}
+.kua_you{
+    width: 182px;
+    height: 691px;
+    float: right;
+    border: 1px solid #eaeaea;
+}
+.kua_s{
+    width: 1005px;
+    height: 382px;
+}
+.s_zuo,.s-you{
+    width: 497px;
+    height: 382px;
+    float: left;
+    border: 1px solid #eaeaea;
+}
+.s-you{
+    margin-left: 10px;
+}
+
+.kua_xia{
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid #eaeaea;
+    height: 300px;
+    border-right: none;
+}
+.kua_xia>ul>li {
+    float: left;
+    width: 251px;
+    height: 300px;
+    border-right: 1px solid #eaeaea;
+}
+.ir1-twocon {
+    position: relative;
+}
+.ir1-twoimg {
+    text-align: center;
+    height: 300px;
+    overflow: hidden;
+}
+.irtwoval {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+}
+.irtwoval1 {
+    height: 25px;
+    line-height: 25px;
+}
+.irtwoval1 del {
+    float: right;
+    color: #999;
+    margin-right: 5px;
+}
+.irtwoval2 {
+    height: 25px;
+    line-height: 25px;
+    margin-top: 3px;
+}
+.irtwoval2 span {
+    width: 135px;
+    height: 25px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-left: 25px;
+}
+.irtwoval2 span a{
+    color: #666;
+    text-decoration: none;
+}
+.irtwoval2 span a:hover {
+    color: #d91516;
+}
+.irtwoval2 em {
+    float: right;
+    margin-right: 5px;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #d91516;
+    font-weight: bold;
+}
+.ir1-twoimg a {
+    width: 250px;
+    height: 300px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.irtwoval {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+}
+
+.rost{
+    width: 169px;
+    height: 605px;
+    margin: 35px 0 0 13px;
+}
+.rost ul li{
+    width: 155px;
+    height: 100px;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+    text-align: center;
+}
+
+.temai{
+    width: 1220px;
+    height: 876px;
+    margin: auto;
+}
+
+.brand{
+    width: 597px;
+    height: 282px;
+    float: left;
+    border: 1px solid #eaeaea;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+.ibrandcon-time {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 175px;
+    height: 35px;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+}
+.tiitem{
+    line-height: 35px;
+    margin-left: 15px;
+}
+.ibrandcon-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.ibrandcon-btn a {
+    width: 100px;
+    height: 30px;
+    background: #c81417;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
+
+
 
 
 
