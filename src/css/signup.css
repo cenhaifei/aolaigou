@@ -93,11 +93,11 @@ table {
 	outline: none;
 }
 
-table .username, table .pwd, table .repwd, table .codeCheck{
+/*table .username, table .pwd, table .repwd, table .codeCheck{
 	position: relative;
 	left: 60px;
 }
-.username ,.pwd ,.repwd {
+*/.username ,.pwd ,.repwd {
 	width: 200px;
 }
 .username i,.pwd i,.repwd i {

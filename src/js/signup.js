@@ -5,6 +5,12 @@ $(function() {
 		$('.soho').remove();
 		$('#main').remove();
 		$('#header').css("height",'35px')
+		$(".sy:eq(0)").click(function(){
+			$(".sy:eq(0) a").attr("href","login.html")
+		})
+		$(".sy:eq(1)").click(function(){
+			$(".sy:eq(1) a").attr("href","signup.html")
+		})	
 	});
 
 	// 表单验证插件
@@ -115,9 +121,13 @@ $(function() {
 			var username = $( 'input[name="username"' ).val();
 			var password = $( 'input[name="password"' ).val();
 			//新增用户信息
-			regInfo[ username ] = password;
+			//regInfo[ username ] = password;
+			var obj = {
+				username : username,
+				password : password
+			}
 			//将json转换为字符串
-			var jsonCookie = JSON.stringify( regInfo );
+			var jsonCookie = JSON.stringify( obj );
 			//写入Cookie，注册信息保存15天
 			$.cookie( 'userInfo', jsonCookie, { expires: 15 } );
 			//注册成功弹窗提示
@@ -129,20 +139,22 @@ $(function() {
 			  	,yes: function(index){
 				    layer.close(index);
 				    //把登录状态写入Cookie，当浏览器关闭时清除
-					$.cookie( 'loginState', username );
-					console.log( "登录状态" + $.cookie( 'loginState' ) );
+					// $.cookie( 'loginState', username );
+					// console.log( "登录状态" + $.cookie( 'loginState' ) );
 					//跳转到主页
-					location.href = "../index.html";
+					location.href = "login.html?"+Math.random();
 				}
 			});
 			
 		} else {
 			console.log("注册失败！")
 		}
+		 console.log(username+"  "+password);
 	})
+	// console.log(username+password);
 	
 	for( var k in regInfo ){
-		console.log( "用户：" + k + ",密码：" + regInfo[k] );
+		console.log( "用户：" + regInfo[k]   );
 	}
 	
 })

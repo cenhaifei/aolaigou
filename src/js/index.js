@@ -1,12 +1,21 @@
 $(function(){
 	//加载头部公共样式
-	$( '#header' ).load( 'heard.html?_=' + Math.random() );
+	$( '#header' ).load( 'heard.html?_=' + Math.random() ,function(){
+        if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
+        //layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
+        $(".sy:eq(0)").html(JSON.parse($.cookie( 'loginState' ) )+ '，欢迎登录 奥莱购')
+        $(".sy:eq(1)").html("退出");
+        $(".sy:eq(1)").click(function(){
+            $.cookie("loginState", "", { expires: -1 });
+            $(".sy:eq(0)").html("<a href='html/login.html'>登录</a>");
+            $(".sy:eq(1)").html("立即注册");
+        })
+    }
+    });
     $( '#footer' ).load( 'footer.html?_=' + Math.random() );
 	//查看当前是否处于登录状态，如果是改变header登录信息
-	if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
-		layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
-	}
-
+	
+   // JSON.parse($.cookie( 'loginState' ) + '，欢迎登录 奥莱购')
 
 //轮播图
 	$('.carousel').carousel()
@@ -218,7 +227,12 @@ function timer(intDiff){
 
 $(function(){
     timer(intDiff);
+
 }); 
+window.onload = function(){
+    
+    
+}
 
 
 

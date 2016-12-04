@@ -5,6 +5,12 @@ $( function(){
 		$('.soho').remove();
 		$('#main').remove();
 		$('#header').css("height",'35px')
+		$(".sy:eq(0)").click(function(){
+			$(".sy:eq(0) a").attr("href","login.html")
+		})
+		$(".sy:eq(1)").click(function(){
+			$(".sy:eq(1) a").attr("href","signup.html")
+		})		
 		// $('#headAllClass').css('background-color', '#FFF');
 		// $('.header_class_area').remove();
 		// $('.clearRed2').remove();
@@ -34,13 +40,13 @@ $( function(){
 			if( $.cookie( 'userInfo' ) ){
 				var regInfo = JSON.parse( $.cookie( 'userInfo' ) );
 			
-				for( var k in regInfo ){
-					console.log( "用户：" + k + ",密码：" + regInfo[k] );
-					if( k === $( '#username' ).val() ){
+				
+					console.log( "用户：" + regInfo.username + ",密码：" + regInfo.password );
+					if( regInfo.username === $( '#username' ).val() ){
 						hasName = true;
-						hasPwd = regInfo[k];
+						hasPwd = regInfo.password;
 					}
-				}
+				
 				
 				if( !hasName ){
 					$( '#loginMesg' ).addClass( 'mesgStyle' );
@@ -51,6 +57,7 @@ $( function(){
 						layer.load(2, {time: 1});
 						window.setTimeout( function(){
 							//调用登录方法
+							
 							loginPass();
 						}, 500)
 					}else{
@@ -64,7 +71,7 @@ $( function(){
 		
 		function loginPass(){
 			//把登录状态写入Cookie，当浏览器关闭时清除
-			$.cookie( 'loginState', $( '#username' ).val() );
+			$.cookie( 'loginState', JSON.stringify( $( '#username' ).val() ) ,{path: '/'});
 			console.log( "登录状态" + $.cookie( 'loginState' ) );
 			//跳转到主页
 			location.href = "../index.html";
