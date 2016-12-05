@@ -2,20 +2,69 @@ $(function(){
 	//加载头部公共样式
 	$( '#header' ).load( 'heard.html?_=' + Math.random() ,function(){
         if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
-        //layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
-        $(".sy:eq(0)").html(JSON.parse($.cookie( 'loginState' ) )+ '，欢迎登录 奥莱购')
-        $(".sy:eq(1)").html("退出");
-        $(".sy:eq(1)").click(function(){
-            $.cookie("loginState", "", { expires: -1 });
-            $(".sy:eq(0)").html("<a href='html/login.html'>登录</a>");
-            $(".sy:eq(1)").html("立即注册");
+            //layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
+            //查看当前是否处于登录状态，如果是改变header登录信息
+            $(".sy:eq(0)").html(JSON.parse($.cookie( 'loginState' ) )+ '，欢迎登录 奥莱购')
+            $(".sy:eq(1)").html("退出");
+            $(".sy:eq(1)").click(function(){
+                $.cookie("loginState", "", { expires: -1 });
+                $(".sy:eq(0)").html("<a href='html/login.html'>登录</a>");
+                $(".sy:eq(1)").html("立即注册");
+            })
+        }
+
+        $('.carval').click(function(){
+            $('.carval a').attr('href','html/shopping_car.html');
         })
-    }
+        $('.former').click(function(){
+            $('.former button a').attr('href','html/list.html');
+        })
     });
     $( '#footer' ).load( 'footer.html?_=' + Math.random() );
-	//查看当前是否处于登录状态，如果是改变header登录信息
-	
-   // JSON.parse($.cookie( 'loginState' ) + '，欢迎登录 奥莱购')
+
+
+
+
+//侧边栏
+
+
+
+$('.ce_li8').click(function(){
+    $('.ceb').hide();
+})
+
+$('.ce_li2').click(function(){
+    $('.ce_b3 a img').css('display','none');
+    // $('.ceb').css({'width':'310px','right':'270px'})
+    $('.ceb').animate({'width':'310px','right':'270px'},2000)
+    $('.ce_b2 a img').css({'display':'block','position':'fixed','top':'0','right':'0'})
+})
+$('.ce_li3').click(function(){
+    $('.ce_b2 a img').css('display','none');
+    $('.ceb').animate({'width':'310px','right':'270px'},2000)
+    $('.ce_b3 a img').css({'display':'block','position':'fixed','top':'0px','right':'0'})
+})
+$('.ce_li9').click(function(){
+    $('.ceb').animate({'width':'40px','right':'270px'},2000,function(){
+            $('.ce_b2 a img').css({'display':'none'})
+            $('.ce_b3 a img').css({'display':'none'})
+    })
+
+})
+$('.ce_li8').click(function(){
+    document.scrollTop(0);
+})
+
+
+
+
+
+
+
+
+
+
+
 
 //轮播图
 	$('.carousel').carousel()
@@ -140,7 +189,6 @@ $(function(){
 		$(this).find('.baiye-da').css({display:"none"});
 	})
 
-
 })
 
 
@@ -188,9 +236,7 @@ $("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("sho
 
 
 
-function showAuto()
-
-{
+function showAuto(){
 
 n = n >=(count -1) ?0 : ++n;
 
@@ -229,10 +275,7 @@ $(function(){
     timer(intDiff);
 
 }); 
-window.onload = function(){
-    
-    
-}
+
 
 
 

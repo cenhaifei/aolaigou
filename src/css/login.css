@@ -66,6 +66,19 @@
 	background-color: rgb(250,250,250);
 	padding: 20px;
 }
+.weixin{
+	float: left;
+}
+.wx{
+	position: relative;
+    top: 7px;
+}
+.coo{
+	float: left;
+}
+.coo a{
+	float: left;
+}
 table tr{
 	height: 40px;
 	width: 285px;	

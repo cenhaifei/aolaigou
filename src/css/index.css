@@ -802,6 +802,148 @@ body{
 }
 
 
+.ceb{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    width: 310px;
+    height: 100%;
+    font-family: "Microsoft YaHei";
+    background: #262626;
+    margin-right: -270px;
+    z-index: 999;
+}
+
+.ceb_xm ul li {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    background: #262626;
+}
+.ce_li1 a{
+    position: relative;
+}
+
+.ceb .llo {
+    background-position: -462px -5px !important;
+    height: 30px;
+    text-indent: -999em;
+    display: block;
+}
+.ceb .logo_i {
+    position: relative;
+    width: 40px;
+    background: url(../images/index/ico1.png) no-repeat;
+    display: block;
+    margin-top: 5px;
+}
+
+
+
+.erwei {
+    background-position: -462px -184px !important;
+    height: 45px;
+}
+.erwei{
+    position: relative;
+    width: 40px;
+    background: url(../images/index/ico1.png) no-repeat;
+    display: block;
+    margin-top: 5px;
+
+}
+.ce_li4 a:hover{
+ background: red;
+}
+
+.ce_d {
+    height: 80px;
+    cursor: pointer;
+}
+
+
+.ii{
+    margin-left: 8px;
+}
+.ce_li4 a p {
+    margin-left: 15px;
+    width: 14px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.i_pop {
+    background-position: -461px -220px !important;
+    height: 45px;
+}
+.i_pop {
+   position: relative;
+    width: 40px;
+    background: url(../images/index/ico1.png) no-repeat;
+    display: block;
+    margin-top: 5px;
+}
+
+.top {
+    background-position: -461px -260px !important;
+    height: 30px;
+}
+.top{
+    position: relative;
+    width: 40px;
+    background: url(../images/index/ico1.png) no-repeat;
+    display: block;
+    margin-top: 5px;
+}
+
+.shanchu{
+    background-position: -461px -286px !important;
+    height: 30px;
+}
+.shanchu{
+    position: relative;
+    width: 40px;
+    background: url(../images/index/ico1.png) no-repeat;
+    display: block;
+    margin-top: 5px;
+}
+.ce_li9{
+    position: relative;
+    bottom: 130px;
+    right: -12px;
+}
+.ce_li8{
+    position: relative;
+    bottom: -130px;
+    right: 0px;
+}
+.ce_li7{
+    position: relative;
+    bottom: -130px;
+    right: 0px;
+}
+.ceb .ce_li6{
+    position: relative;
+    bottom: -130px;
+    height: 40px;
+    right: 0px;
+    background: red;
+}
+.ce_li6 img{
+    margin-top: 6px;
+}
+.ceb .ce_li3:hover,.ceb .ce_li4:hover,.ceb .ce_li5:hover,.ceb .ce_li7:hover,.ceb .ce_li8:hover{
+    background: red;
+}
+
+.ce_b2 a img,.ce_b3 a img{
+    display: none;
+}
+
+
 
 
 

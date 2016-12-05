@@ -40,7 +40,8 @@ table {
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
+      display: inline;
+  /*vertical-align: middle;*/
 }
 
 /* line 30, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */

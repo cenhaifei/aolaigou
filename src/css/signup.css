@@ -60,7 +60,7 @@ table {
 }
 
 .regBody table tr {
-	height: 69px;
+	height: 63px;
 	padding-top: 9px;
 	font-size: 14px;
 }
@@ -127,9 +127,11 @@ table .codeCheck {
 }
 
 table tr:nth-child(5) {
-	height: 40px;
+	height: 63px;
 }
-
+/*.t_d{
+	display: inline !important;
+}*/
 table .codeCheck input {
 	width: 150px;
 	border: 1px solid #ddd;
@@ -185,12 +187,17 @@ table label {
 	color: #E4393C;
 	padding: 10px;
 	display: block;
-	position: absolute;
-	top: 52px;
-	/*left: 280px;*/
+	position: relative;
+	left: 80px;
 }
 table .codeCheck label{
-	top: 20px;
+	width: 210px;
+    border: 0 !important;
+    color: #E4393C;
+    padding: 10px;
+    display: block;
+    position: relative;
+    left: -8px;
 }
 
 table .error {

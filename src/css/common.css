@@ -18,16 +18,12 @@
 .hf_man1{
 	display: inline-block;
 	line-height: 35px;
-	width: 40%;
+	width: 400px;
 	float: left;
 }
 .hf_man2{
-	/*float: left;*/
-	width: 60%;
-	position: absolute;
-	right: 0;
-	top: 0px;
-		z-index: 99;
+	float: right;
+	width: 800px;
 }
 .hf_man2 >ul{
 	float: right;
@@ -65,7 +61,9 @@
 
 }
 
-
+.hf_man2 ul{
+    margin-bottom: 0;
+}
 
 .soho{
     width: 100%;
@@ -200,7 +198,7 @@
     border-top: 0;
     z-index: 10;
     position: absolute;
-    top: 220px;
+    top: 225px;
     background-color: #fff;
 }
 .sidebar ul{

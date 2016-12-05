@@ -1,11 +1,18 @@
 $(function() {
 	// 加载头部header
 	$('#header').load('../heard.html?_=' + Math.random(), function() {
-		// $('.header_top_ad').remove();
 		$('.sidebar').remove();
-		// $('#headAllClass').css('background-color', '#FFF');
-		// $('.header_class_area').remove();
-		// $('.clearRed2').remove();
+
+		if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
+            //layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
+            $(".sy:eq(0)").html(JSON.parse($.cookie( 'loginState' ) )+ '，欢迎登录 奥莱购')
+            $(".sy:eq(1)").html("退出");
+            $(".sy:eq(1)").click(function(){
+                $.cookie("loginState", "", { expires: -1 });
+                $(".sy:eq(0)").html("<a href='login.html'>登录</a>");
+                $(".sy:eq(1)").html("<a href='signup.html'>立即注册</a>");
+            })
+        }
 	});
 
 	// 加载尾部footer
@@ -128,8 +135,8 @@ $(function() {
 				left: $( '.good_detail_img img' ).offset().left, //开始位置（必填）#fly元素会被设置成position: fixed
 			},
 			end: {
-				top: 248, //结束位置（必填）
-				left: 1170, //结束位置（必填）
+				top: 190, //结束位置（必填）
+				left: 1250, //结束位置（必填）
 				width: 10, //结束时高度
 				height: 10, //结束时高度
 			},

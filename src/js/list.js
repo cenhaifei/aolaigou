@@ -3,7 +3,18 @@ $(function() {
 	$('#header').load('../heard.html?_=' + Math.random(), function() {
 		
 		$('.sidebar').remove();
-		$('#header').css("height",'245px')
+		$('#header').css("height",'245px')		
+		if( ( $.cookie( 'loginState' ) !=  'null' ) && ( $.cookie( 'loginState' ) != null ) ){
+            //layer.msg( $.cookie( 'loginState' ) + '，欢迎登录 奥莱购');
+            $(".sy:eq(0)").html(JSON.parse($.cookie( 'loginState' ) )+ '，欢迎登录 奥莱购')
+            $(".sy:eq(1)").html("退出");
+            $(".sy:eq(1)").click(function(){
+                $.cookie("loginState", "", { expires: -1 });
+                $(".sy:eq(0)").html("<a href='login.html'>登录</a>");
+                $(".sy:eq(1)").html("<a href='signup.html'>立即注册</a>");
+            })
+        }
+
 		//计算商品数量,决定购物车是否为空，显示对应的图片
 		if(Number($('.shopcarCount').html()) > 0) {
 			console.log("大于0")
