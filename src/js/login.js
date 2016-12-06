@@ -11,9 +11,7 @@ $( function(){
 		$(".sy:eq(1)").click(function(){
 			$(".sy:eq(1) a").attr("href","signup.html")
 		})		
-		// $('#headAllClass').css('background-color', '#FFF');
-		// $('.header_class_area').remove();
-		// $('.clearRed2').remove();
+
 
 	});
 
@@ -38,16 +36,15 @@ $( function(){
 			var hasPwd = "";
 			
 			if( $.cookie( 'userInfo' ) ){
-				var regInfo = JSON.parse( $.cookie( 'userInfo' ) );
-			
-				
+					//	将JSON字符串转换为对象
+				var regInfo = JSON.parse( $.cookie( 'userInfo' ) );			
+					//打印出获取到的用户名和密码
 					console.log( "用户：" + regInfo.username + ",密码：" + regInfo.password );
 					if( regInfo.username === $( '#username' ).val() ){
 						hasName = true;
 						hasPwd = regInfo.password;
 					}
-				
-				
+							
 				if( !hasName ){
 					$( '#loginMesg' ).addClass( 'mesgStyle' );
 					$( '#loginMesg' ).html( "用户名不存在" );

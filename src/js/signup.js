@@ -20,13 +20,7 @@ $(function() {
 			password: { rangelength:[6,12], },
 			repassword: { equalTo: "#password", },
 			codeCheck: { equalTo: "#code", },
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
-//			<--------------先关闭验证码,正式启动时请打开!!!!!!------------->
+
 
 		},
 		messages: {
@@ -100,6 +94,7 @@ $(function() {
 	//保存注册信息的json，检查cookie是否有用户信息
 	if( $.cookie( 'userInfo' ) ){
 		console.log( "cookie有信息！" + $.cookie( 'userInfo' ) );
+		//把字符串转换成对象
 		var regInfo = JSON.parse( $.cookie( 'userInfo' ) );
 	}else{
 		console.log( "cookie没有信息！");
@@ -109,6 +104,7 @@ $(function() {
 //	立即注册按钮
 	$('#submit').click(function( e ) {
 		e.preventDefault();
+		//closest从#submit开始，向上找form，并返回
 		if( $(this).closest('form').valid() && !$( '#checkbox' ).get(0).checked ){
 			//正上方弹窗
 			layer.msg('请勾选：我已阅读并同意《奥莱购会员协议》', {
@@ -128,15 +124,15 @@ $(function() {
 			}
 			//将json转换为字符串
 			var jsonCookie = JSON.stringify( obj );
-			//写入Cookie，注册信息保存15天
+			//写入Cookie，expires注册信息保存15天
 			$.cookie( 'userInfo', jsonCookie, { expires: 15 } );
 			//注册成功弹窗提示
 			layer.msg('注册成功！&nbsp;用户名：' + username, {
 			  	time: 20000, //20s后自动关闭
 			  	icon: 1,
 			  	skin: 'layui-layer-rim', //加上边框
-			  	btn: ['立即登录', '返回']
-			  	,yes: function(index){
+			  	btn: ['立即登录', '返回'],
+			  	yes: function(index){
 				    layer.close(index);
 				    //把登录状态写入Cookie，当浏览器关闭时清除
 					// $.cookie( 'loginState', username );
@@ -144,6 +140,7 @@ $(function() {
 					//跳转到主页
 					location.href = "login.html?"+Math.random();
 				}
+
 			});
 			
 		} else {

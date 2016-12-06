@@ -107,3 +107,12 @@
 	color: #0162ac;
 	font-weight: bolder;
 }
+.xm{
+	position: relative;
+    top: 19px;
+}
+.navbar-right{
+	width:300px !important;
+	position: relative;
+    top: -25px;
+}

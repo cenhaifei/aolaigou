@@ -59,13 +59,6 @@ $('.ce_li8').click(function(){
 
 
 
-
-
-
-
-
-
-
 //轮播图
 	$('.carousel').carousel()
 
@@ -263,10 +256,10 @@ function timer(intDiff){
     }
     if (minute <= 9) minute = '0' + minute;
     if (second <= 9) second = '0' + second;
-    $('#day_show').html(day+"天");
-    $('#hour_show').html('<s id="h"></s>'+hour+'时');
-    $('#minute_show').html('<s></s>'+minute+'分');
-    $('#second_show').html('<s></s>'+second+'秒');
+    $('.day_show').html(day+"天");
+    $('.hour_show').html('<s id="h"></s>'+hour+'时');
+    $('.minute_show').html('<s></s>'+minute+'分');
+    $('.second_show').html('<s></s>'+second+'秒');
     intDiff--;
     }, 1000);
 } 

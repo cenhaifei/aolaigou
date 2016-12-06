@@ -186,17 +186,7 @@ $(function() {
 						}
 					}, 30)
 				}
-				//			console.log( '点击button,index=' + index );
-				//			if( index <= 1 ){
-				//				$( '.goods_page .btn-group button:first' ).addClass( 'disabled' );
-				//			}else{
-				//				$( '.goods_page .btn-group button:first' ).removeClass( 'disabled' );
-				//			}
-				//			if( index >= pageCount - 2 ){
-				//				$( '.goods_page .btn-group button:last' ).addClass( 'disabled' );
-				//			}else{
-				//				$( '.goods_page .btn-group button:last' ).removeClass( 'disabled' );
-				//			}
+
 			})
 			//点击上下页，滚动到列表顶部
 		$('.goods_sort ul a').click(function(e) {
