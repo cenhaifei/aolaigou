@@ -47,22 +47,6 @@ $(function() {
 	});
 	
 
-	$('.more_btn').click(function() {
-		if($('span', this).hasClass('glyphicon-chevron-down')) {
-			$('span', this).removeClass('glyphicon-chevron-down');
-			$('span', this).addClass('glyphicon-chevron-up');
-			$(this).parent().next().animate({
-				height: 125,
-			}, 300);
-		} else {
-			$('span', this).removeClass('glyphicon-chevron-up');
-			$('span', this).addClass('glyphicon-chevron-down');
-			$(this).parent().next().animate({
-				height: 0,
-			}, 300);
-		}
-	})
-
 	//请求数据，加载评论列表
 	$.get('../data/comment.json', function(resp) {
 		//每页多少个评论
@@ -85,7 +69,7 @@ $(function() {
 
 	}, 'json');
 
-	//修改购买数量
+	//修改购买数量 点击减号自减1
 	$('.buyCount button:eq(0)').click(function() {
 		console.log("-");
 		var value = parseInt($('.buyCount input').val());
@@ -93,7 +77,7 @@ $(function() {
 			var good_count = $('.buyCount input').val(value - 1);
 		}
 	})
-
+	//点击减号自增1
 	$('.buyCount button:eq(1)').click(function() {
 			console.log("+");
 			var value = parseInt($('.buyCount input').val());
@@ -128,7 +112,7 @@ $(function() {
 				window.clearInterval( timer );
 			}
 		}, 10)
-
+		//弹窗插件
 		flyer.fly({
 			start: {
 				top: $( '.good_detail_img img' ).offset().top, //开始位置（必填）

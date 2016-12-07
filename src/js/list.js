@@ -26,22 +26,6 @@ $(function() {
 	// 加载尾部footer
 	$('#footer').load('../footer.html?_=' + Math.random());
 
-	// $('.cart_over').click(function() {
-	// 	location.href = 'cart.html';
-	// })
-
-	console.log('每页显示的商品数量Cookie：' + $.cookie('one_page_goods'));
-	$('.page_goods_count').prop('placeholder', $.cookie('one_page_goods'));
-
-	$('.page_goods_count').blur(function() {
-		console.log($('.page_goods_count').val());
-		if($('.page_goods_count').val() != null && $('.page_goods_count').val() >= 1) {
-			$.cookie('one_page_goods', $('.page_goods_count').val(), {
-				expires: 15
-			});
-			location.href = 'list.html';
-		}
-	})
 
 	if($.cookie('one_page_goods') == null) {
 		//每页多少个商品
@@ -106,16 +90,6 @@ $(function() {
 		}, 'json');
 	})
 	
-	//点击销量排序
-	$('.goods_sort button:eq(0)').click(function() {
-		$.get('../data/goods_list.json', function(_data) {
-			//无需排序，json文件就是按照销量排序写的
-			$( '.good' ).remove();
-			$( '.page' ).remove();
-			get_json( _data );
-			
-		}, 'json');
-	})
 
 	//请求数据，加载商品列表
 	$.get('../data/goods_list.json', function(_data) {
@@ -143,15 +117,6 @@ $(function() {
 		//显示第一页
 		show_page(index, resp, pageCount, goodsCount, every_page);
 		//		$( '.goods_page .btn-group button:first' ).addClass( 'disabled' );
-
-		//点击页码显示对应页面
-		$('.goods_page .btn-group').on('click', '.page', function() {
-			$('.good').remove();
-			index = $('.page').index(this) + 1;
-			console.log('第' + index + '页');
-			$('.page_info').html(index);
-			show_page(index, resp, pageCount, goodsCount, every_page);
-		});
 
 		//点击上下页功能
 		$('.search_right .prev').click(function() {
@@ -226,7 +191,7 @@ $(function() {
 			e.stopPropagation();
 
 			//加入购物车cookie
-			//保存购物车的json，检查cookie是否有用户购物车的信息
+			//保存购物车的json，检查cookie是否有用户购物车的信息,如果有，将购物车写入cookie
 			if($.cookie('cart_menu')) {
 				console.log("点击前cart_menu有信息！" + $.cookie('cart_menu'));
 				var cart_json = JSON.parse($.cookie('cart_menu'));
@@ -308,32 +273,9 @@ $(function() {
 				});
 				$('body').append(flyer);
 
-				//滚动条高度
-				var scrollHeight = $(window).scrollTop();
-
-				flyer.fly({
-					start: {
-						top: $(self).closest('.good').find('img').offset().top - scrollHeight, //开始位置（必填）
-						left: $(self).closest('.good').find('img').offset().left, //开始位置（必填）#fly元素会被设置成position: fixed
-					},
-					end: {
-						top: $('.cart_over').offset().top - $(window).scrollTop() + 20, //结束位置（必填）
-						left: $('.cart_over').offset().left + 30, //结束位置（必填）
-						width: 10, //结束时高度
-						height: 10, //结束时高度
-					},
-					autoPlay: true, //是否直接运动,默认true
-					speed: 1.2, //越大越快，默认1.2
-					vertex_Rtop: $(self).closest('.good').find('img').offset().top - scrollHeight - 300, //运动轨迹最高点top值，默认20
-					onEnd: function() {
-							flyer.remove(); //移除dom
-							$('.cart_over img').attr('src', '../images/list/cart_full_count.png');
-							$('.cart_over .show_count').html(goods_count);
-						} //结束回调
-				});
 			}
 		});
-
+	/*************************************************************/
 		// 点击对应商品,跳转到对应商品的详细页面
 		$('.good').click(function() {
 			var good_id = $(this).attr('good_id');

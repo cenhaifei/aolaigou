@@ -76,8 +76,6 @@ $( function(){
 		function count_total(){
 			var total_price = 0;
 			$( '.subtotal' ).each( function(){
-//				console.log("小计：");
-//				console.log( Number( $( this ).html().split('￥')[1] ) );
 				total_price += Number( $( this ).html().split('￥')[1] );
 				$( this ).next().html( Math.floor( Number( $( this ).html().split('￥')[1] ) / 10 ) );
 			})
