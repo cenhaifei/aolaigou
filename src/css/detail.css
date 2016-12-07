@@ -270,13 +270,13 @@
 }
 .comment_content ul:first-child li a{
 	line-height: 35px;
-	height: 35px;
+	height: 30px;
 	border-top: 2px solid #f00;
 	border-bottom: none;
 	color: #F00;
 	position: relative;
 	left: -1px;
-	top: -6px;
+	top: -2px;
 	display: block;
 	background: #FFF;
 }
