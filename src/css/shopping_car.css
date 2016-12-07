@@ -48,6 +48,8 @@
 }
 .cart_body .panel-heading span:nth-child(7){
 	margin-left: 27px;
+	position: relative;
+    top: -10px;
 }
 .cart_body .panel-footer{
 	text-align: right;

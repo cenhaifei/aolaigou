@@ -168,6 +168,7 @@ $( function(){
 		});
 		
 		//修改input商品数量，同时修改cookie
+		//bind为一个元素绑定一个事件处理程序
 		$(".cart_body .good_price").bind("blur", function() {
 			var good_index = $(".cart_body .good_price").index( this );
 			console.log( 'input:' + good_index );

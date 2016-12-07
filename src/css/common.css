@@ -45,21 +45,20 @@
 .sy a:hover{
 	color: red;
 }
-.xiala:hover{
+/*.xiala:hover{
 	background-color: #fff;
 	border: 1px solid #dedede;
 	border-top: 0;
-	/*width: 82px;*/
 	padding: 0 11px;
-}
+}*/
 .xiala ul li{
 	line-height: 28px;
 	display: none;
 }
-.xiala:hover ul li{
+/*.xiala:hover ul li{
 	display: block;
 
-}
+}*/
 
 .hf_man2 ul{
     margin-bottom: 0;

@@ -126,8 +126,9 @@ $(function() {
 		//商品总数量
 		var goodsCount = resp.phone.length;
 		$('.goodsCount_info').html(goodsCount);
-		//分多少页
+		//分多少页 every_page每页多少个商品
 		var pageCount = Math.ceil(goodsCount / every_page);
+
 		$('.pageCount_info').html(pageCount);
 		console.log('pageCount=' + pageCount);
 		var btn_html = "";
@@ -235,7 +236,7 @@ $(function() {
 				var cart_json = [];
 			}
 
-			//飞入购物车效果
+			//飞入购物车效果 插件
 			fly_good(this);
 
 			var good_id = $(this).closest('.good').attr('good_id');

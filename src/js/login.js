@@ -20,8 +20,10 @@ $( function(){
 		//阻止浏览器默认事件
 		e.preventDefault();
 		console.log("login");
+		//loginMesg的样式和内容设为空
 		$( '#loginMesg' ).removeClass( 'mesgStyle' );
 		$( '#loginMesg' ).html("");
+		//判断用户名和密码是否为空，如果为空样式和内容
 		if( $( '#username' ).val().length <= 0  ){
 			console.log( "用户名为空" );
 			$( '#loginMesg' ).addClass( 'mesgStyle' );
@@ -53,8 +55,7 @@ $( function(){
 					if( hasPwd === $( '#password' ).val() ){
 						layer.load(2, {time: 1});
 						window.setTimeout( function(){
-							//调用登录方法
-							
+							//调用登录方法							
 							loginPass();
 						}, 500)
 					}else{

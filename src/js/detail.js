@@ -168,7 +168,7 @@ $(function() {
 			var cart_json = [];
 		}
 		
-	//飞入购物车效果
+	//飞入购物车效果 插件
 	fly_good();
 
 		var good_id = $('.good_detail_r h4').attr('goodID');
